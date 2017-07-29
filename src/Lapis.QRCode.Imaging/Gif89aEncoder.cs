@@ -30,6 +30,7 @@ namespace Lapis.QRCode.Imaging
 
                 WriteLogicalScreenDescriptor(context);
                 WriteColorTable(context);
+                WriteApplicationExtensionBlock(context);
                 WriteGraphicsControlExtension(context);
 
                 for (var i = 0; i < bmp.FrameCount; i++)
@@ -67,6 +68,34 @@ namespace Lapis.QRCode.Imaging
             stream.WriteByte(0x38);
             stream.WriteByte(0x39);
             stream.WriteByte(0x61);
+        }
+
+        protected void WriteApplicationExtensionBlock(GifEncodingContext context)
+        {
+            context.Stream.WriteByte(0x21);
+            context.Stream.WriteByte(0xFF);
+            context.Stream.WriteByte(0x0B);
+
+            // "NETSCAPE2.0"
+            context.Stream.WriteByte(0x4E);
+            context.Stream.WriteByte(0x45);
+            context.Stream.WriteByte(0x54);
+            context.Stream.WriteByte(0x53);
+            context.Stream.WriteByte(0x43);
+            context.Stream.WriteByte(0x41);
+            context.Stream.WriteByte(0x50);
+            context.Stream.WriteByte(0x45);
+            context.Stream.WriteByte(0x32);
+            context.Stream.WriteByte(0x2E);
+            context.Stream.WriteByte(0x30);
+
+            context.Stream.WriteByte(0x03);
+            context.Stream.WriteByte(0x01);
+            // Loop forever
+            context.Stream.WriteByte(0x00);
+            context.Stream.WriteByte(0x00);
+
+            context.Stream.WriteByte(0x00);
         }
 
         protected void WriteGraphicsControlExtension(GifEncodingContext context)

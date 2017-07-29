@@ -27,14 +27,14 @@ Options:
 ```
 qr-art "A panda" samples/panda.jpg gif
 ```
-![](src/qr-art/samples/panda.jpg) ![](src/qr-art/samples/panda_output.gif)
+![](src/qr-art/samples/panda.jpg =214x214) ![](src/qr-art/samples/panda_output.gif)
 
 ```
 qr-art "A tree on the grass" samples/tree.jpg gif -f #657981 -b #B8D5F2
 ```
-![](src/qr-art/samples/tree.jpg) ![](src/qr-art/samples/tree_output.gif)
+![](src/qr-art/samples/tree.jpg =214x214) ![](src/qr-art/samples/tree_output.gif)
 
 ```
 qr-art  "A dog combing hair" samples/hair.gif gif -a
 ```
-![](src/qr-art/samples/hair.gif) ![](src/qr-art/samples/hair_output.gif)
+![](src/qr-art/samples/hair.gif =214x214) ![](src/qr-art/samples/hair_output.gif)
