@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Encoding\Lapis.QRCode.Encoding.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Imaging\Lapis.QRCode.Imaging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-*" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Encoding\Lapis.QRCode.Encoding.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Imaging\Lapis.QRCode.Imaging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Art\Lapis.QRCode.Art.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lapis.QRCode.Imaging.Drawing\Lapis.QRCode.Imaging.Drawing.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-*" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+  </ItemGroup>
+</Project>
